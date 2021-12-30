@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Moeda / Dolar - Real </title>
+    <link rel="shortcut icon" href="img/undraw_transfer_money_rywa.png">
+
+    <meta name="author" content="Jackson Silva">
+    <meta name="description" content="Site online para converter Dolar para o Real, ou Real para o Dolar em tempo real, com API que atualiza a cada 30 segundos">
+    <meta name="keywords" content="conversor moeda real dolar convertor">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!--Font awesome-->
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg="nest"></script>
+    
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Oxygen+Mono&family=Press+Start+2P&family=Righteous&family=Ubuntu:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <section id="frm-convert-money">
+        <!--Section Combox-->
+        <div class="container-combox-group">
+            <div class="container-combox">
+                <img src="img/flagUSA.jpg" id="first-img" class="img" alt="bandeira dos EUA">
+                <select name="cbFirst" id="combox01" class="combox">
+                    <option value="dolar">Dolar</option>
+                    <option value="real">Real</option>
+                </select>
+            </div>
+
+            
+            <div class="container-btn-convert">
+                <button id="btnReverse"><i class="fas fa-exchange-alt"></i></button>
+            </div>
+
+            <div class="container-combox">
+                <img src="img/flagBrazil.png" id="second-img" class="img" alt="bandeira do Brazil">
+                <select name="cbFirst" id="combox02" class="combox">
+                    <option value="real">Real</option>
+                    <option value="dolar">Dolar</option>
+                </select>
+            </div>
+           
+        </div>
+            <!--Section Máxima ou Mínima do Dia-->
+        <div class="info-height-low">
+            <div>
+                <span id="spnHeight">Max R$:5,75</span>
+                <p>Máxima do dia</p>
+            </div>
+            <div>
+                <span id="spnLow">Min R$:5,65</span>
+                <p>Mínimo do dia</p>
+            </div>
+            
+            
+        </div>
+        <!--inputs-->
+        <fieldset class="form__fieldset">
+            <div class="container-input">
+                <label class="field__lbl"for="txtNumber1">US$:</label>
+                <input type="number" id='txtNumber1' class="field__txt" required>
+            </div>
+            <div class="container-input">
+                <label class="field__lbl"for="txtNumber2">R$:</label>
+                <input type="number" id='txtNumber2' class="field__txt" required>
+            </div>
+
+            <div class="form__btns">
+                <button class="btn" id="btnConfirm">Confirmar</button>
+                <button class="btn" id="btnCancel">Cancelar</button>
+            </div>
+        </fieldset>
+
+
+        <section class="frm__result">
+            <h2 class="subtitulo">Resultado da Conversão:</h2>
+
+            <ul id="list-result">
+                <li>
+                    <img src="img/flagUSA.jpg" class="img" alt="bandeira dos EUA">
+                    <span id="spnTotallyDollar">US$: 0.00</span>
+                </li>
+                <li>
+                    <img src="img/flagBrazil.png" class="img" alt="bandeira do Brazil">
+                    <span id="spnTotallyReal" >R$: 0,00</span>
+                </li>
+            </ul>
+        </section>
+
+    </section>
+    <script src="js/model.js"></script>
+    <script src="js/controller.js"></script>
+</body>
+</html>
