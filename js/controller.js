@@ -46,10 +46,10 @@ $btnReverse.addEventListener('click',()=>{
     }
 });
 function realToDolar(){
-    $firstImgCmb.src = '../img/flagBrazil.png';
+    $firstImgCmb.src = './img/flagBrazil.png';
     $combox01.value = 'real';
 
-    $secondImgCmb.src = '../img/flagUSA.jpg';
+    $secondImgCmb.src = './img/flagUSA.jpg';
     $combox02.value = 'dolar';
 
     $labels[0].textContent = 'R$:';
@@ -58,10 +58,10 @@ function realToDolar(){
     showInputs();
 }
 function dolarToReal(){
-    $firstImgCmb.src = '../img/flagUSA.jpg';
+    $firstImgCmb.src = './img/flagUSA.jpg';
     $combox01.value = 'dolar';
 
-    $secondImgCmb.src = '../img/flagBrazil.png';
+    $secondImgCmb.src = './img/flagBrazil.png';
     $combox02.value = 'real';
     
     txtNumber2.readOnly = true;
